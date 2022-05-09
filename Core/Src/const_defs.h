@@ -35,9 +35,21 @@
 
 
 // Assist Defs
-#define PARK_MULTIPLIER				1			// RED 		>= distance_parked * PARK_MULTIPLIER
-#define SLOW_MULTIPLIER			    1.05		// YELLOW 	>= distance_parked * SLOW_MULTIPLIER
-#define GO_MULTIPLIER   			3			// GREEN	>= distance_parked * GO_MULTIPLIER
+#define STOP_BUFFER					10          // Stop Buffer distance = distance_parked + 10cm
+#define SLOW_BUFFER					100         // Slow Buffer distance = distance_parked + 100cm
+
+
+// State Defs
+#define STATE_IDLE                  0           // Idle State
+#define STATE_MAIN                  1           // Main State
+#define STATE_SET                   2           // Set State
+
+
+// System SET defs
+#define DISTANCE_SET_BUFFER_SIZE    256		    // SET Buffer Size
+#define SET_STATE_WAIT              0           // SET State Wait
+#define SET_STATE_SET               1           // SET State Set
+#define SET_STATE_DONE              2           // SET State Done
 
 
 // Word Defs

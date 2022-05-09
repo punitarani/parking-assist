@@ -70,7 +70,7 @@ void debounce()
 				if (sw_on_time >= DEBOUNCE_LONG_TIME)
 				{
 					// Check if Long Press has been acknowledged
-					if (long_press_done == YES)
+					if (sw_long_press_done == YES)
 					{
 						sw_state = NO_PRESS;
 
@@ -81,7 +81,7 @@ void debounce()
 					else
 					{
 						sw_state = LONG_PRESS;
-						long_press_done = NO;
+						sw_long_press_done = NO;
 					}
 				}
 			}
@@ -110,7 +110,7 @@ void debounce()
 				else if (sw_on_time >= DEBOUNCE_LONG_TIME)
 				{
 					// Reset
-					long_press_done 	= NO;
+					sw_long_press_done 	= NO;
 					sw_debounce_state 	= DEBOUNCE_IDLE;
 					sw_time_press 		= 0;
 					sw_time_release 	= 0;
